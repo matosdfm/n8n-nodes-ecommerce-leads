@@ -468,10 +468,12 @@ export class EcommerceLeads implements INodeType {
 							'Store IDs',
 							i,
 						);
-						if (ids.length === 0) {
-							throw new NodeOperationError(this.getNode(), 'Enter at least one store ID', {
-								itemIndex: i,
-							});
+						if (ids.length === 0 || ids.length > 300) {
+							throw new NodeOperationError(
+								this.getNode(),
+								`Enter 1 to 300 store IDs. You entered ${ids.length}.`,
+								{ itemIndex: i },
+							);
 						}
 						pushJson(
 							await apiJson.call(this, 'GET', '/api/reveals/status', {
