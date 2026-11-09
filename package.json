@@ -1,0 +1,60 @@
+{
+	"name": "n8n-nodes-ecommerce-leads",
+	"version": "0.1.0",
+	"description": "n8n node for Ecommerce Leads: look up ecommerce stores, search 500,000 stores by buying signals, manage watchlists and signal sets, and reveal decision makers.",
+	"license": "MIT",
+	"homepage": "https://getecommerceleads.com/docs",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"ecommerce",
+		"leads",
+		"lead generation",
+		"shopify",
+		"sales intelligence"
+	],
+	"author": {
+		"name": "matosdfm",
+		"email": "125611354+matosdfm@users.noreply.github.com",
+		"url": "https://getecommerceleads.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/matosdfm/n8n-nodes-ecommerce-leads.git"
+	},
+	"bugs": {
+		"url": "https://github.com/matosdfm/n8n-nodes-ecommerce-leads/issues"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/EcommerceLeadsApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/EcommerceLeads/EcommerceLeads.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.55.6",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^21.1.0",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
