@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-ecommerce-leads",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "n8n node for Ecommerce Leads: look up ecommerce stores, search 500,000 stores by buying signals, manage watchlists and signal sets, and reveal decision makers.",
 	"license": "MIT",
 	"homepage": "https://getecommerceleads.com/docs",
